@@ -14,5 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val viewmodel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.mainViewModel = viewmodel
+        binding.lifecycleOwner = this
     }
 }
